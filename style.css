@@ -23,10 +23,6 @@
   align-items: center;
 }
 
-.left {}
-
-.right {}
-
 .nameBox {
   border: 1px solid black;
   width: 25vw;
@@ -41,7 +37,7 @@
 }
 
 .playerImage {
-  border: 1px solidblack;
+  border: 1px solid black;
   width: 30vw;
   height: 40vh;
   background-image: url("./images/space_hero.gif");
@@ -55,7 +51,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solidblack;
+  flex-direction: column;
+  border: 1px solid black;
   width: 15vw;
   height: 15vh;
   text-align: center;
@@ -65,9 +62,10 @@
 }
 
 .enemyImage {
-  border: 1px solidblack;
+  border: 1px solid black;
   width: 30vw;
   height: 35vh;
+  position: relative;
   background-image: url("./images/enemy.gif");
   background-size: cover ;
   background-position: center;
@@ -75,15 +73,26 @@
   box-shadow: 0px 0px 20px 10px white;
 }
 
+.enemyImage button {
+  height: 16vh;
+  width: 16vh;
+  position: absolute;
+}
+
 .enemyStats {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solidblack;
+  flex-direction: column;
+  border: 1px solid black;
   width: 15vw;
   height: 15vh;
   text-align: center;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.5em;
   box-shadow: 0px 0px 20px 10px white;
+}
+
+.hide {
+  display: none;
 }

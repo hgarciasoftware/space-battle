@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=1300">
+    <title>Space Battle</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,21 +16,29 @@
         <div class="nameBox">USS Schwarzenegger</div>
         <div class="playerImage"></div>
         <div class="playerStats">
-          Hull : 15 <br>
-          FirePower : 5 <br>
-          Accuracy : .7 <br>
+          <span class="hull">Hull : 20</span>
+          <span class="firepower">FirePower : 5</span>
+          <span class="accuracy">Accuracy : .7</span>
         </div>
       </div>
       <div class="mainCharacterView right">
         <div class="nameBox">Enemy</div>
-        <div class="enemyImage"></div>
+        <div class="enemyImage">
+          <button id="fight" style="top: 0; left: 0">FIGHT</button>
+          <button id="continue" class="hide" style="top: 0; left: 0">CONTINUE</button>
+          <button id="escape" style="bottom: 0; right: 0" disabled>ESCAPE</button>
+        </div>
         <div class="enemyStats">
-          Hull : 6 <br>
-          FirePower : 3 <br>
-          Accuracy : .6 <br>
+          <span class="hull">Hull : 6</span>
+          <span class="firepower">FirePower : 3</span>
+          <span class="accuracy">Accuracy : .6</span>
         </div>
       </div>
     </div>
+    <script src="./ShipModel.js"></script>
+    <script src="./EnemyModel.js"></script>
+    <script src="./CharacterView.js"></script>
+    <script src="./SpaceBattle.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
