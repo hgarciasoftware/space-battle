@@ -17,32 +17,35 @@ class SpaceBattle {
   }
 
   fight() {
+    // TODO: split this method into two
     this.player.model.attackEnemy();
     this.invader.view.updateStats();
 
     if (this.invader.model.hull === 0) {
       this.invader.view.changeImage('explosion');
+
       setTimeout(() => {
         alert('VICTORY');
 
         this.updateControls('afterFight');
       }, 200);
     } else {
-        setTimeout(() => {
-          alert('ENEMY ATTACK');
-          this.invader.model.attackEnemy();
-          this.player.view.updateStats();
+      setTimeout(() => {
+        alert('ENEMY ATTACK');
 
-          if (this.player.model.hull === 0) {
-            this.player.view.changeImage('explosion');
+        this.invader.model.attackEnemy();
+        this.player.view.updateStats();
 
-            setTimeout(() => {
-              alert('DEFEAT');
+        if (this.player.model.hull === 0) {
+          this.player.view.changeImage('explosion');
 
-              this.updateControls('lose');
-            }, 200);
-          }
-        }, 200);
+          setTimeout(() => {
+            alert('DEFEAT');
+
+            this.updateControls('lose');
+          }, 200);
+        }
+      }, 200);
     }
   }
 
