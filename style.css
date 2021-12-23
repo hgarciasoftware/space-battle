@@ -96,3 +96,40 @@
 .hide {
   display: none;
 }
+
+@media (max-width: 1299px) and (orientation: landscape) {
+  .nameBox {
+    font-size: 1.5em;
+  }
+
+  .playerStats, .enemyStats {
+    font-size: 1.1em;
+  }
+}
+
+@media (orientation: portrait) {
+  .bodyContainer {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .mainCharacterView {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .playerImage, .enemyImage {
+    width: 45vw;
+  }
+
+  .playerStats, .enemyStats {
+    height: 10vh;
+    width: 20vw;
+  }
+
+  .enemyImage button {
+    font-size: 2em;
+    height: 10vh;
+    width: 20vw;
+  }
+}
